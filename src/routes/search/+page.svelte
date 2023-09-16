@@ -1,4 +1,5 @@
 <script>
+	import Pic from '$lib/assets/Asset 1.png';
 	export let data;
 	function onClick(userid) {
 		return (event) => {
@@ -7,7 +8,7 @@
 	}
 </script>
 
-<img style="margin: auto;" class="w-1/4" src="../../../src/lib/assets/Asset 1.png" />
+<img style="margin: auto;" class="w-1/4" src={Pic} />
 
 <div class="flex flex-col items-center">
 	<ul class="container" style="position: absolute; top:500px">
