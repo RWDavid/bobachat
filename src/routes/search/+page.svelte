@@ -1,1 +1,1 @@
-<h1>This is a test</h1>
+<h1>This is where you can search bobachat members.</h1>
