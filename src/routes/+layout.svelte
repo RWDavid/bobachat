@@ -33,7 +33,7 @@
 		<a href="/" class="font-bold btn btn-ghost text-3xl">BOBACHAT</a>
 		<span class="grow" />
 		{#if loggedIn}
-			<a href="/inbox" class="btn btn-ghost text-lg">Inbox</a>
+			<!-- <a href="/inbox" class="btn btn-ghost text-lg">Inbox</a> -->
 			<a on:click={onClick} href="#" class="btn btn-ghost text-lg">Log Out</a>
 		{/if}
 	</div>
