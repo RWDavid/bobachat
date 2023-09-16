@@ -7,7 +7,7 @@
 	}
 </script>
 
-<img style="margin: auto;" class="w-1/4" src="/src/lib/assets/Asset 1.png" />
+<img style="margin: auto;" class="w-1/4" src="../../../src/lib/assets/Asset 1.png" />
 
 <div class="flex flex-col items-center">
 	<ul class="container" style="position: absolute; top:500px">
