@@ -1,8 +1,6 @@
 <script>
 	import '../app.css';
 
-	import { browser } from '$app/environment';
-
 	function getCookie(name) {
 		var dc = document.cookie;
 		var prefix = name + '=';
@@ -22,21 +20,21 @@
 		return decodeURI(dc.substring(begin + prefix.length, end));
 	}
 
-	let loggedIn = browser && getCookie('username') !== null;
+	let loggedIn = getCookie('userid') !== null;
 
 	function onClick(event) {
-		document.cookie = 'username=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		document.cookie = 'userid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 		window.location.href = '/';
 	}
 </script>
 
-<body>
-	<div class="header p-2 flex flex-row">
-		<a href="/" class="font-bold">BOBACHAT</a>
+<body data-theme="retro">
+	<div class="h-16 items-center p-2 flex flex-row bg-base-300">
+		<a href="/" class="font-bold btn btn-ghost text-3xl">BOBACHAT</a>
 		<span class="grow" />
 		{#if loggedIn}
-			<a href="/inbox">Inbox</a>
-			<a on:click={onClick} href="#">Log Out</a>
+			<a href="/inbox" class="btn btn-ghost text-lg">Inbox</a>
+			<a on:click={onClick} href="#" class="btn btn-ghost text-lg">Log Out</a>
 		{/if}
 	</div>
 
@@ -44,12 +42,7 @@
 </body>
 
 <style>
-	.header {
-		background: #d4ae6c;
-		font-size: 30px;
-	}
-
 	body {
-		background: #ffdb9e;
+		min-height: 100vh;
 	}
 </style>
